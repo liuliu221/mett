@@ -1,0 +1,29 @@
+{
+    "code": 0,
+    "msg": "获取成功",
+    "list": [
+        {
+        	"id":1,
+            "name": "会议室101",
+            "age":21,
+            "createtime": "XX楼1楼"
+        },
+        {
+        	"id":2,
+            "name": "会议室102",
+            "age":31,
+            "createtime": "XX楼1楼"
+        },{
+        	"id":3,
+            "name": "会议室103",
+            "age":23,
+            "createtime": "XX楼2楼"
+        },{
+        	"id":4,
+            "name": "会议室104",
+            "age":18,
+            "createtime": "XX楼2楼"
+        }
+    ],
+    "count": 57
+}

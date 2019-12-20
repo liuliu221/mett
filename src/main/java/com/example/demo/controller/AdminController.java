@@ -1,0 +1,31 @@
+package com.example.demo.controller;
+
+
+import com.example.demo.entity.Admin;
+import com.example.demo.service.AdminService;
+import com.example.demo.utils.Msg;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/admin")
+public class AdminController {
+
+    @Autowired
+    private AdminService adminService;
+
+    @PostMapping(value = "/login")
+    public Msg adminLogin(@RequestBody Admin admin){
+       Admin user= adminService.selectOne(admin);
+       if(user!=null){
+           return Msg.success();
+       }
+       Msg msg=new Msg();
+       msg.setCode("401");
+       return msg;
+    }
+
+}
